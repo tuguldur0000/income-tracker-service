@@ -3,7 +3,7 @@ const {getIncome, createIncome}=require("../controller/incomeController")
 
 const transactionRoute= Router()
 
-transactionRoute.get("/get-income", getIncome)
+transactionRoute.get("/get-transaction", getIncome)
 transactionRoute.post("/create-transaction", createIncome)
 
 module.exports= {transactionRoute}
