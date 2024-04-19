@@ -1,22 +1,20 @@
-const {mongoose , Schema}= require("mongoose")
+const { mongoose, Schema } = require("mongoose");
 
-const transactionSchema= new Schema({
-    userId :{type:String, required:true},
-    category:{
-        type:String,
-        enum:["food", "shopping", "bills", "clothing"]
-    },
-    transactionTitle:String,
-    amount:{type:Number,require:true},
-    createdAt:{type:Date, default:Date.now()},
-    note:String,
-    transactionType:{
-        type:String,
-        enum:["income", "expense"]
-    }
+const transactionSchema = new Schema({
+  userId: { type: String, required: true },
+  category: {
+    type: String,
+    enum: ["food", "shopping", "bills", "clothing"],
+  },
+  transactionTitle: String,
+  amount: { type: Number, require: true },
+  createdAt: { type: String, default: Date.now() },
+  note: String,
+  transactionType: {
+    type: String,
+    enum: ["income", "expense"],
+  },
 });
 
-const transactionModel= mongoose.model("transactions", transactionSchema);
-module.exports= transactionModel;
-
- 
+const transactionModel = mongoose.model("transactions", transactionSchema);
+module.exports = transactionModel;
